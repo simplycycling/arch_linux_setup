@@ -160,7 +160,7 @@ for how to install yaourt.
 
 ### Change screen resolution via xrandr
  
-Again, the [Arch Wiki}(https://wiki.archlinux.org/index.php/HiDPI) is where
+Again, the [Arch Wiki](https://wiki.archlinux.org/index.php/HiDPI) is where
 this info comes from, so it's probably worth taking some time to absorb
 some of the information there. I am, in fact, basically cutting and pasting
 from that, for the rest of this section.
