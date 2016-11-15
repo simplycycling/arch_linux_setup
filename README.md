@@ -24,9 +24,18 @@ when you get to the point in Mark's articles, where you actually need
 packer. IIRC, that's in part 3.
 
 At this point, this is basically just a run list of what I do after I get
-the base install and Gnome set up.
+the base install and Gnome set up. Eventually, I'll get as much of this
+as possible into Ansible; when I do, I'll post the playbook and roles. Don't
+be lazy, though - always do it the hard way, the first time!
 
 ## Basic setup for my Arch Linux install
+
+### Install bash completions
+
+Make your life easier from the start - do this ASAP. I do it during the
+base install.
+
+    sudo pacman -S bash-completion
 
 ### Install xf86-input-synaptics
 
@@ -56,8 +65,29 @@ I use a Yubikey Nano as two factor authentication with Google and Github,
 as well as for storing my gpg keys, and ssh authentication.
 
     pacman -S yubikey-personalization
-    add udev rules to /etc/udev/rules.d/
-    reboot
+    
+add the udev rules in this repo (or in the Yubico repo - they're the same) 
+to /etc/udev/rules.d/ and reboot.
+
+### Set up gpg
+
+This assumes that you are importing pre-existing gpg keys on a Yubikey,
+or some other hardware key that works similarly. The previous section
+has to be done properly, or this will not work.
+
+First, create new stubs that will point at your Yubikey:
+
+    gpg2 --card-status
+    
+If this fails, review the "Set up Yubikey" section. 
+
+Next, import your public key. Assuming it's named publickey.txt:
+
+    gpg2 --import < publickey.txt
+
+### Set up ssh 
+
+(https://wiki.archlinux.org/index.php/GnuPG#gpg-agent)
 
 ### Set up git to sign commits by default
 
@@ -87,9 +117,6 @@ for how to install yaourt.
 
 Install slack
 
-Set up gpg
-
-Set up ssh (https://wiki.archlinux.org/index.php/GnuPG#gpg-agent)
 
 Install dotfiles
 
