@@ -196,10 +196,18 @@ Pro Retina, 11,3). If you need this for external monitors, it looks like
 Just read the wiki. Collective knowledge is almost always smarter than
 any one of us.
 
-Install slack
+### Install slack
 
+    yaourt slack desktop
 
-Install dotfiles
+And the peace and quiet that you've been enjoying dies a plaid death.
+
+### Install dotfiles
+
+I've created a [git repo](https://github.com/simplycycling/arch_linux_setup_dotfiles) 
+for my dotfiles, which, as I said, I ripped off from Frazelle, who in 
+turn ripped them off from somebody else. Feel free to use them for 
+inspiration, or mock them as you will.
 
 Add .css to change GTK title bar, which is way too goddamn big (https://unix.stackexchange.com/questions/276951/how-to-change-the-titlebar-height-in-standard-gtk-apps-and-those-with-headerbars)
 
