@@ -221,11 +221,31 @@ Copy the gtk.css included in this repo to the correct directory
     
 That should be all you need.
 
-Install lm_sensors
+### Install lm_sensors
 
+    sudo pacman -S lm_sensors
+    
+lm_sensors gives a fair amount of output, and all I really care about is
+the CPU temps, so if you want to see the full output, and you're using my
+.alias file, open it in vi and comment out the following line:
+
+    alias sensors="sensors | sed '/^T/ d'"
+
+Unless you've modified it, it's the last line in that file, line number
+152 or 153.
+    
+### Install mbpfan
+
+mbpfan is a utility that gives you a bit more control over how fast your
+fan will run, at what temperature. 
+
+    yaourt mbpfan
+    
+The configuration file is at /etc/mbpfan.conf, and out of the box, it polls
+every 7 seconds. I generally set mine to start raising the fan speed at
+55 C, higher still at 63 C, and then max out at 80 C.
 Install and configure mutt
 
-Install mbpfan (https://github.com/dgraziotin/mbpfan)
 
 Install Go
 
