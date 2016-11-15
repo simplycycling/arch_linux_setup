@@ -209,6 +209,25 @@ for my dotfiles, which, as I said, I ripped off from Frazelle, who in
 turn ripped them off from somebody else. Feel free to use them for 
 inspiration, or mock them as you will.
 
+### Reduce window title bar size
+
+This is another matter of personal taste, but I'm pretty sure that the
+guy who came up with the default gnome window file size is the same guy
+that decided the default wallpaper.
+
+The following will reduce it to just slightly bigger than the buttons to
+close/minimize. Create a 
+
+    .default-decoration {
+        min-height: 0; /* let the entry and button drive the titlebar size */
+        padding: 2px
+    }
+    
+    .default-decoration .titlebutton {
+        min-height: 26px; /* tweak these two props to reduce button size */
+        min-width: 26px;
+    }
+
 Add .css to change GTK title bar, which is way too goddamn big (https://unix.stackexchange.com/questions/276951/how-to-change-the-titlebar-height-in-standard-gtk-apps-and-those-with-headerbars)
 
 Install lm_sensors
