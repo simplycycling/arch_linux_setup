@@ -125,7 +125,14 @@ bash conf file, and run the following:
 
     ssh-add -L
     
-It should output a long-ish string that ends in a card number. If it didn't
+It should output a long-ish string that ends in a card number - mine looks
+like this:
+ 
+    $ ssh-add -L
+    ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC8O1m6tqUYRSINoPYfK9UnGmbokHsSKNGZS+k9ggoanBHhUOR+x/q1aTn12aD6OJU+aU7EbDreGL1/T0fYn8NItxepKaBdjzBisROn+52UONV04h5UjmaWX6hW/MkypmR81Vci4A31HfpDQN2gVgC8A+5sAo92/pkbswZmPzbHNn6Dloy/kciYviEPHky6ilVZbYcN9ppDyrIDDuuKuuKl0wadfpqZK6hilRfXS7seUllA5n/5BxSRG6xruW5XzzLaPTPlACGnvkV8Sf5UYTnlz9rqRM+2LcM4DBRfiDdgtVLZeIlrDFbbODOeZU8XYsaffz2K0Mt+F/B1GhaUBeG5 cardno:000604953496
+
+ 
+ If it didn't
 work, I may have missed something - drop me a line on twitter, and we'll
 suss it out.
 
