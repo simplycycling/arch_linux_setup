@@ -15,7 +15,7 @@ sense!).
 So if your intention is to set up Arch Linux, I'm creating this guide to
 hopefully make your life a little easier. This guide does assume that
 you have your base install and WM/WE all ready to go. If you aren't at
-that point yet, ou're going to want to start with [another excellent guide(http://zanshin.net/2015/02/05/arch-linux-on-a-macbook-pro-part-1-creating-a-usb-installer/)
+that point yet, you're going to want to start with [another excellent guide](http://zanshin.net/2015/02/05/arch-linux-on-a-macbook-pro-part-1-creating-a-usb-installer/)
 to actually set up dual booting, and get the base Arch Linux install going.
 There are a couple of typos and mistakes in that article (actually series
 of articles), but they're trivial. Also, do note that the packer info is
