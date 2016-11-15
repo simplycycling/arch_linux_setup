@@ -263,7 +263,7 @@ Assuming you're using gmail, you'll also need an application specific
 password. It's a Google service, pretty easy to look up and do. C'mon,
 you just installed Arch. You can google something.
 
-Install Go
+### Install Go
 
 Go to the [Go download page](https://golang.org/dl/), and download the 
 latest Linux tarball. Cd into the directory you downloaded it to, and 
@@ -276,5 +276,23 @@ Export the path (if you're using my dotfiles, this is already in the
 
     export PATH=$PATH:/usr/local/go/bin
 
-Install PyCharm
+### Install PyCharm
 
+PyCharm is one of the tools that is open all day long, on my laptop,
+whether I'm at work, or doing one of my own personal projects. I use it
+for everything - writing Python scripts and apps (obviously), Go apps,
+Ansible playbooks, Terraform, Packer, shell scripts...I could live without
+it if I had to, but I don't have to, so I don't.
+ 
+
+With Arch, you can just install PyCharm from AUR, and the next time, I
+just might do that. But I'm used to installing it from the tarball, so I
+went with that, this time.
+
+Download the latest tarball from the [PyCharm downloads](https://www.jetbrains.com/pycharm/download/#section=linux)
+page, either the Community version or the Professional version, as you see
+fit. Move it to the directory of your choice to build it in (I have an src
+dir in my home directory), expand the tarball, and run bin/pycharm.sh.
+Definitely select the option for it to create a desktop icon. Outside of
+that, select the options that you see fit to select, and you're good to
+go.
