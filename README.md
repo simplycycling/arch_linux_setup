@@ -133,8 +133,8 @@ like this:
 
  
  If it didn't
-work, I may have missed something - drop me a line on twitter, and we'll
-suss it out.
+work, I may have missed something - drop me a line on [twitter](https://twitter.com/rogersherman),
+ and we'll suss it out.
 
 ### Set up git to sign commits by default
 
