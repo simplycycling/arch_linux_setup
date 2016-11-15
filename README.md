@@ -84,6 +84,12 @@ If this fails, review the "Set up Yubikey" section.
 Next, import your public key. Assuming it's named publickey.txt:
 
     gpg2 --import < publickey.txt
+    
+Finally, mark the trust level of your key as "Ultimate"
+
+    gpg2 --key-edit <your identity>
+    gpg> trust (it will ask you to confirm)
+    gpg> quit
 
 ### Set up ssh 
 
