@@ -188,10 +188,10 @@ If the UI is still too big, increase the scale:
 
     xrandr --output DP-2 --scale 1.25x1.25
 
-The above gave me exactly what I needed on my laptop. If you need this
-for external monitors, it looks like it's not much more complex than 
-what I've done here - go read the wiki! If you have mouse or trackpad
-issues - read the wiki.
+The above gave me exactly what I needed on my laptop (late 2013 Macbook 
+Pro Retina, 11,3). If you need this for external monitors, it looks like
+ it's not much more complex than what I've done here - go read the wiki!
+  If you have mouse or trackpad issues - read the wiki.
 
 Just read the wiki. Collective knowledge is almost always smarter than
 any one of us.
