@@ -246,6 +246,11 @@ fan will run, at what temperature.
 The configuration file is at /etc/mbpfan.conf, and out of the box, it polls
 every 7 seconds. I generally set mine to start raising the fan speed at
 55 C, higher still at 63 C, and then max out at 80 C.
+
+To have mbpfan start at boot, enable it in systemd.
+
+    sudo systemctl enable mbpfan.service
+
 Install and configure mutt
 
 
