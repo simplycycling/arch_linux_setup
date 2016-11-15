@@ -253,8 +253,28 @@ To have mbpfan start at boot, enable it in systemd.
 
 Install and configure mutt
 
+    sudo pacman -S mutt
+
+The rest of this one is going to take a minute.
+
+Long story short, I've included a .muttrc in the dotfiles - it's sanitized,
+of course, you'll have to put your own name and email address in there.
+Assuming you're using gmail, you'll also need an application specific 
+password. It's a Google service, pretty easy to look up and do. C'mon,
+you just installed Arch. You can google something.
 
 Install Go
+
+Go to the [Go download page](https://golang.org/dl/), and download the 
+latest Linux tarball. Cd into the directory you downloaded it to, and 
+issue the following command:
+
+    sudo tar -C /usr/local/ -xzf go1.7.3.linux-amd64.tar.gz
+    
+Export the path (if you're using my dotfiles, this is already in the
+.exports file)
+
+    export PATH=$PATH:/usr/local/go/bin
 
 Install PyCharm
 
