@@ -160,7 +160,41 @@ for how to install yaourt.
 
 ### Change screen resolution via xrandr
  
-(https://wiki.archlinux.org/index.php/HiDPI)
+Again, the [Arch Wiki}(https://wiki.archlinux.org/index.php/HiDPI) is where
+this info comes from, so it's probably worth taking some time to absorb
+some of the information there. I am, in fact, basically cutting and pasting
+from that, for the rest of this section.
+
+First scale Gnome up to the minimum size which is too big. Usually "2" 
+is already too big, but if "2" is still small for you, try "3", etc.
+
+    gsettings set org.gnome.desktop.interface scaling-factor 2
+    
+Now start scaling down by setting zoom-out factor with xrandr. First get 
+the output name:
+
+    xrandr | grep -w connected | cut -d' ' -f1
+    
+(Rog note - this gave me an output of DP-2, which I will use in the
+following example)
+
+Use this value to specify --output further on. If you have two or more 
+screens you can set their scale independently. Now, to zoom-out 1.2 
+times, run the following:
+
+    xrandr --output DP-2 --scale 1.2x1.2
+
+If the UI is still too big, increase the scale:
+
+    xrandr --output DP-2 --scale 1.25x1.25
+
+The above gave me exactly what I needed on my laptop. If you need this
+for external monitors, it looks like it's not much more complex than 
+what I've done here - go read the wiki! If you have mouse or trackpad
+issues - read the wiki.
+
+Just read the wiki. Collective knowledge is almost always smarter than
+any one of us.
 
 Install slack
 
