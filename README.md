@@ -47,6 +47,11 @@ it around and click it, but it's super annoying, and reduces functionality
 by a considerable margin.
 
     sudo pacman -S xf86-input-synaptics
+### Install OpenSSH
+
+You're probably going to need this.
+
+    sudo pacman -S openssh
 
 ### Change to dark theme 
 
@@ -93,7 +98,36 @@ Finally, mark the trust level of your key as "Ultimate"
 
 ### Set up ssh 
 
-(https://wiki.archlinux.org/index.php/GnuPG#gpg-agent)
+You can read the [Arch Linux wiki page](https://wiki.archlinux.org/index.php/GnuPG#gpg-agent)
+for setting up gpg-agent, to get all of the information I'm going to list
+here. If you're as lazy as I am, this should work for you.
+
+Create your gpg-agent conf file, if it doesn't already exist:
+
+    touch ~/.gnupg/gpg-agent.conf
+    
+Open it in vim (I'm just assuming, here), and populate it thusly:
+
+    default-cache-ttl 3600
+    pinentry-program /usr/bin/pinentry-gtk-2
+    enable-ssh-support
+
+Then add the following to the end of your .bashrc or .bash_profile,
+whichever you use for this type of configuration:
+
+    unset SSH_AGENT PID
+    if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
+            export SSH_AUTH_SOCK="/run/user/$UID/gnupg/S.gpg-agent.ssh"
+    fi
+
+To see if it worked, open up a new terminal or source your newly modified
+bash conf file, and run the following:
+
+    ssh-add -L
+    
+It should output a long-ish string that ends in a card number. If it didn't
+work, I may have missed something - drop me a line on twitter, and we'll
+suss it out.
 
 ### Set up git to sign commits by default
 
