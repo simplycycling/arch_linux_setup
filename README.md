@@ -25,8 +25,10 @@ packer. IIRC, that's in part 3.
 
 At this point, this is basically just a run list of what I do after I get
 the base install and Gnome set up. Eventually, I'll get as much of this
-as possible into Ansible; when I do, I'll post the playbook and roles. Don't
-be lazy, though - always do it the hard way, the first time!
+as possible into Ansible; when I do, I'll post the playbook and roles - 
+ideally, it will be something you can run before installing any graphical 
+bits.
+ Don't be lazy, though - always do it the hard way, the first time!
 
 ## Basic setup for my Arch Linux install
 
