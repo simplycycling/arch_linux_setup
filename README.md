@@ -62,8 +62,8 @@ as well as for storing my gpg keys, and ssh authentication.
 ### Set up git to sign commits by default
 
 Exactly as it says, this will set up git to sign commits by default. I
-love nerdy security shit. GnuPG is for me, as a labcoat is to a scientist
- - it makes them feel "sciency". 
+love nerdy security shit. GnuPG is for me, as a labcoat is to a scientist - it
+ makes them feel "science-y". 
  
     git config --global gpg.program gpg2
     git config --global user.signingkey <your identity here>
